@@ -9,4 +9,4 @@ before_script: pip install docker-compose
 
 script:
   - docker-compose run app sh -c "python manage.py test && flake8"
-  
+  - flake8 . --exit-zero # Exit with status code "0" even if there are errors
